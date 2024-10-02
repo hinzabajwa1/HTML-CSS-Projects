@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>JavaScript Documentation</h1>
+        <ul>
+          <a href="#introduction"><li>Introduction</li></a>
+          <a href="#what_you_should_already_know"
+            ><li>What you should already know</li></a
+          >
+          <a href="#javaScript_and_java"><li>JavaScript and Java</li></a>
+          <a href="#hello_world"><li>Hello world</li></a>
+          <a href="#variables"><li>Variables</li></a>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="introduction">
+        <h2>Introduction</h2>
+        <article>
+          <p>
+            JavaScript is a lightweight, interpreted programming language that
+            allows you to create dynamically updating content, control
+            multimedia, animate images, and much more. It is a core technology
+            of the World Wide Web, alongside HTML and CSS. JavaScript is widely
+            used for web development and is a key tool for building interactive
+            websites and web applications.
+          </p>
+          <p>
+            JavaScript runs directly in the browser, which means it doesn't need
+            to be compiled, making it accessible for beginners. It's essential
+            for adding functionality like form validation, user interactions,
+            and event handling.
+          </p>
+          <p>
+            JavaScript contains a standard library of objects, such as Array,
+            Date, and Math, and a core set of language elements such as
+            operators, control structures, and statements. Core JavaScript can
+            be extended for a variety of purposes by supplementing it with
+            additional objects; for example:
+          </p>
+          <ul>
+            <li>
+              Client-side JavaScript extends the core language by supplying
+              objects to control a browser and its Document Object Model (DOM).
+              For example, client-side extensions allow an application to place
+              elements on an HTML form and respond to user events such as mouse
+              clicks, form input, and page navigation.
+            </li>
+            <li>
+              Server-side JavaScript extends the core language by supplying
+              objects relevant to running JavaScript on a server. For example,
+              server-side extensions allow an application to communicate with a
+              database, provide continuity of information from one invocation to
+              another of the application, or perform file manipulations on a
+              server.
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section id="what_you_should_already_know">
+        <h2>What You Should Already Know</h2>
+        <article>
+          <p>
+            Before starting with JavaScript, you should have a basic
+            understanding of the following concepts:
+          </p>
+          <ol>
+            <li>
+              <b>HTML</b>: HTML is the structure of your web pages. You should
+              know how to structure web documents using HTML tags.
+            </li>
+            <li>
+              <b>CSS</b>: You should also understand how to style your HTML
+              using CSS. This will help you design web pages.
+            </li>
+            <li>
+              <b>Basic Programming Concepts</b>: It’s useful to have a basic
+              understanding of programming logic, such as variables, loops, and
+              functions. This will make learning JavaScript easier.
+            </li>
+          </ol>
+        </article>
+      </section>
+    </section>
+    <section id="javaScript_and_java">
+      <h2>JavaScript and Java</h2>
+      <article>
+        <p>
+          Despite the similarity in their names, JavaScript and Java are entirely different languages, each with its own uses and strengths.
+        </p>
+        <ul>
+          <li>
+            <b>JavaScript</b>: A scripting language used primarily for client-side development to make web pages interactive.
+          </li>
+          <li>
+            <b>Java</b>: A compiled, object-oriented programming language used in various applications, from desktop to mobile apps.
+          </li>
+        </ul>
+        <p>JavaScript is lightweight and focuses on web development, while Java is used for larger-scale applications. They share common concepts like object-oriented programming, but their use cases are distinct.</p>
+      </article>
+    </section>
+    <section id="hello_world">
+      <h2>Hello World</h2>
+      <article>
+        <p>
+          The "Hello, World!" example is the most basic program that you can write in JavaScript. It simply displays the text "Hello, World!" on a webpage.
+        </p>
+        <p>Here is a basic example of how to write and run a "Hello, World!" program in JavaScript:</p>
+        </p>
+        <code>   
+      function sayHello() {
+         alert('Hello, World!');}  <!-- Display "Hello, World!" in an alert box -->
+         onclick="sayHello()"
+        </code>
+      </article>
+    </section>
+    <section id="variables">
+      <h2>Variables</h2>
+      <article>
+        <p>
+          In JavaScript, variables are used to store data values. You can declare variables using the <b>var</b>, <b>let</b>, or <b>const</b> keywords.
+        </p>
+        <ul>
+          <li><b>var</b>: This is the traditional way of declaring variables. However, it has function scope, which can sometimes cause unexpected behavior.</li>
+          <li><b>let</b>: Introduced in ES6 (ECMAScript 2015), let has block scope, meaning the variable is only available within the block where it is defined. It's a better option for declaring variables inside loops or conditions.</li>
+          <li><b>const</b>: Also introduced in ES6, const is used to declare variables whose values won’t change. It is useful for defining constants.</li>
+        </ul>
+        <h6>Example:</h6>
+        <code>
+          let name = "Alex"; 
+          const age = 25; 
+          console.log(name); // Output: Alex
+          console.log(age); // Output: 25
+        </code>
+        <p>In this example, <b>name</b> is a variable that can be changed later, while <b>age</b> is a constant and cannot be changed.</p>
+      </article>
+    </section>
+    </main>
+  </body>
+</html>

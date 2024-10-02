@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* width is used when you want a fixed size.
+min-width is useful when you want to prevent an element from becoming too small.
+max-width is ideal for ensuring an element doesn't become too large on bigger screens */
+
+
+
+/* Basic resets and styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+  font-weight: 300;
+  scroll-behavior: smooth;
+}
+section{
+  scroll-margin: 50px;
+}
+ 
+/* Header styling */
+
+ header{
+  background-color:#021526;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 5px 5px 5px rgba(1,1,1,0.5);
+ }
+
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color:#fff;
+  padding: 20px 0;
+
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+  padding: 0;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  border-bottom: 2px solid white;
+  transition: 0.2s ease-in;
+}
+
+.logo{
+  font-size: 32px;
+  font-weight: 600;
+
+}
+
+.hero_section{
+  background-image: url(images/concert-3387324_1280.jpg);
+  height: 100vh;
+  display: grid;
+  color: white;
+  place-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+.hero_section .container{
+  display:flex ;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  
+}
+ .hero_section h1{
+  font-size: 96px;
+ }
+ .hero_section h3{
+  font-size: 32px;
+ }
+ .hero_section p{
+  font-size: 20px;
+ }
+ 
+ .music_section{
+  padding-top: 50px;
+  background: #03346E;
+  padding-bottom: 100px;
+ }
+ .music_section .container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  color: white ;
+  
+ }
+
+.ipad-iphone-img{
+  position: relative;
+  top: 300px;
+  margin-top: -340px;
+}
+.about_music {
+  padding-top: 300px;
+  display: grid;
+  place-items: center;
+  gap: 20px;
+}
+.mac-img{
+  margin-top: -33px;
+  margin-bottom: -100px;
+ 
+  
+}
+.btn-primary {
+  background-color: #03346E; /* Blue */
+  border-color:  #03346E;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #021526;; /* Darker Blue on hover */
+  border-color: #021526;
+}
+
+.video_section{
+  position: relative;
+  height: 100vh; /* Adjust the height as needed */
+  overflow: hidden;
+ 
+}
+.music_video{
+  
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.music_video video{
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1;
+}
+.video_content{
+  margin-top: 200px;
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+.video_content h3 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+.gift_section{
+  display: flex;
+  justify-content: center;
+  margin: 100px 0;
+  gap: 50px;
+  scroll-margin: 100px;
+  
+
+}
+.gift_content{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.gift_content .btn-primary{
+  align-self: start;
+}
+.footer_upper{
+  background-color: #021526;
+  padding: 20px;
+  color: white;
+ 
+}
+.footer_upper .container{
+  display: flex;
+  justify-content: space-between;
+}
+.footer_upper h4{
+  padding-bottom: 10px;
+  border-bottom: 2px solid white;
+  margin-bottom: 10px;
+}
+.footer_upper ul{
+  
+  list-style:none;
+  padding: 5px 0;
+}
+.footer_lower{
+  background-color: #03346E;
+  color: white;
+  padding: 20px;
+ display: flex;
+ justify-content: center;
+}
+.footer_upper .footer_links h4{
+  font-size:17px;
+}
+
+
+
+  
+  
+
+
+

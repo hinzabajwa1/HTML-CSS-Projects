@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #ccc;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.apply_box {
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  margin-top: 50px;
+  border-radius: 10px;
+  /* The box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.1);  property creates a shadow that is 4px to the right, if its 4px then its to the lft same as if its - it upward  3px down, with a blur of 5px and a light black color. It's used to give depth or highlight an element like a card or button, making it appear elevated or prominent on the page. */
+  box-shadow: ; 4px 3px 5px rgba(1,1,1,0.5)
+}
+.title_small{
+  font-size:20px;
+  Color :DarkBlue;
+}
+/* display: grid; creates a grid container; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); creates columns that fit the container, each at least 200px wide and can expand, while gap: 20px; sets a 20px space between grid items. */
+.form_container {
+  margin-top:20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+ 
+}
+
+.form_control{
+ 
+  display: flex;
+  flex-direction: column;
+}
+label{
+  font-size:15px;
+  margin-bottom:5px;
+}
+input,select,textarea{
+  font-size:15px;
+  padding:6px 10px;
+  border:1px solid #ccc;
+  border-radius:4px;
+}
+input:focus{
+  outline-color:red;
+}
+.button_container{
+  display:flex;
+  justify-content:flex-end;
+  margin-top:20px;
+}
+button{
+  background-color:red;
+  border:2px solid transparent;
+  padding:5px 10px;
+  color:white;
+  border-radius:8px;
+  transition:0.3s ease-in;
+}
+button:hover{
+  background-color:#ccc;
+  border:2px solid black;
+  color:black;
+  transition:0.3s ease-in;
+  cursor:pointer;
+}
+/* The CSS property grid-column: 1 / span 2; is used in a CSS Grid layout to control how an element spans across columns:
+
+1 is the starting point of the column (the element will start in the first column).
+span 2 means the element will span across 2 columns, starting from the first column.
+So, if you have a grid with multiple columns, this rule makes the element occupy the space of two columns, starting from the first column. */
+.textarea_control {
+  grid-column: 1 / span 2;
+  
+}
+.textarea_control textarea {
+  width: 100%;
+}
+
+@media (max-width: 460px) {
+  .textarea_control {
+    grid-column: 1 / span 1;
+  }
+} ;

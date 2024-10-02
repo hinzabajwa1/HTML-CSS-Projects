@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  /* 1rem = 16px; to make  1rem = 10px;  to make it responsive  */
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.4rem;
+}
+html,
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+}
+header {
+  position: sticky;
+  top: 0;
+  background-color: #f7f7ff;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  max-width: 1200px;
+}
+nav ul {
+  display: flex;
+  gap: 2rem;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+nav ul li:hover {
+  border-bottom: 2px solid #f2d0a4;
+}
+nav ul a {
+  font-size: 2rem;
+  font-weight: 400;
+}
+main {
+  max-width: 1200px;
+  margin: auto;
+}
+/* Hero-Section */
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero-content h1 {
+  font-size: 5rem;
+  line-height: 1.2;
+}
+.hero-content h4 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 300;
+}
+.hero-image img{
+  height: 400px;
+  border-radius: 5rem;
+}
+/* Long Card Section */
+.h-card {
+  display: flex;
+  margin:2rem 1rem;
+  box-shadow: 0px 5px 4px rgba(221,221,221,0.25);
+  border: 1px solid #e2e2e2;
+  align-items: center;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.card-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+}
+  
+.status {
+
+  display: flex;
+  justify-content: space-between;
+ 
+}
+.read-btn{
+  all :unset;
+  font-weight: 600;
+
+}
+.read-btn:hover{
+  border-bottom: 1px solid #f2d0a4;
+}
+.h-card img{
+  height: 300px;
+}
+ .v-card{
+  display: flex;
+  flex-direction: column-reverse;
+   max-width: 320px; 
+  
+  box-shadow: 0px 5px 4px rgba(221,221,221,0.25);
+  border: 1px solid #e2e2e2;
+  align-items: center;
+  border-radius: 0.5rem;
+  overflow: hidden;
+ }
+ .v-card img{
+  width: 100%;
+  height: 100%;
+
+}
+/* 
+- repeat(auto-fill, minmax(320px, 1fr)):
+  This creates a responsive grid layout with columns that are at least 320px wide and grow up to fill the available space.
+  auto-fill will add as many columns as possible to fit within the container.
+  minmax(320px, 1fr) ensures that each column is a minimum of 320px and can grow to fill the space equally (1 fraction of the remaining space).
+*/
+
+ .card-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(320px, 1fr));
+   gap: 20; 
+ }
+ .card-wrapper{
+  display: flex;
+  justify-content: center;
+ }
+ footer{
+  display: flex;
+  gap:2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem; 
+  max-width: 1200px;
+  margin: 0 auto;
+  }
+   ul li{
+    font-size: 1.8rem;
+    
+   }
+   ul{
+    display: flex;
+    gap :2rem;
+   }
+/* Post Page */
+.post h1{
+  font-size: 3rem;
+
+}
+.banner-img img{
+  width: 100%;
+
+}
+.about-author{
+  display: flex;
+  justify-content: space-between;
+  gap:1rem;
+  align-items: center;
+  
+}
+.post hr{
+  margin: 3rem 0;
+}
+article{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 2rem;
+
+}
