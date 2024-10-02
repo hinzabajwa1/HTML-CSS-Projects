@@ -10,6 +10,7 @@ body {
   max-width: 900px;
   margin: 0 auto;
 }
+/* The box-shadow explaination: 4px 3px 5px rgba(1, 1, 1, 0.1);  property creates a shadow that is 4px to the right, if its 4px then its to the lft same as if its - it upward  3px down, with a blur of 5px and a light black color. It's used to give depth or highlight an element like a card or button, making it appear elevated or prominent on the page. */
 
 .apply_box {
   width: 600px;
@@ -18,59 +19,59 @@ body {
   background-color: white;
   margin-top: 50px;
   border-radius: 10px;
-  /* The box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.1);  property creates a shadow that is 4px to the right, if its 4px then its to the lft same as if its - it upward  3px down, with a blur of 5px and a light black color. It's used to give depth or highlight an element like a card or button, making it appear elevated or prominent on the page. */
-  box-shadow: ; 4px 3px 5px rgba(1,1,1,0.5)
+
+  box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.5);
 }
-.title_small{
-  font-size:20px;
-  Color :DarkBlue;
+.title_small {
+  font-size: 20px;
+  color: #191970;
 }
 /* display: grid; creates a grid container; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); creates columns that fit the container, each at least 200px wide and can expand, while gap: 20px; sets a 20px space between grid items. */
 .form_container {
-  margin-top:20px;
+  margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
- 
 }
 
-.form_control{
- 
+.form_control {
   display: flex;
   flex-direction: column;
 }
-label{
-  font-size:15px;
-  margin-bottom:5px;
+label {
+  font-size: 15px;
+  margin-bottom: 5px;
 }
-input,select,textarea{
-  font-size:15px;
-  padding:6px 10px;
-  border:1px solid #ccc;
-  border-radius:4px;
+input,
+select,
+textarea {
+  font-size: 15px;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
-input:focus{
-  outline-color:red;
+input:focus {
+  outline-color: red;
 }
-.button_container{
-  display:flex;
-  justify-content:flex-end;
-  margin-top:20px;
+.button_container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
 }
-button{
-  background-color:red;
-  border:2px solid transparent;
-  padding:5px 10px;
-  color:white;
-  border-radius:8px;
-  transition:0.3s ease-in;
+button {
+  background-color: red;
+  border: 2px solid transparent;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 8px;
+  transition: 0.3s ease-in;
 }
-button:hover{
-  background-color:#ccc;
-  border:2px solid black;
-  color:black;
-  transition:0.3s ease-in;
-  cursor:pointer;
+button:hover {
+  background-color: #ccc;
+  border: 2px solid black;
+  color: black;
+  transition: 0.3s ease-in;
+  cursor: pointer;
 }
 /* The CSS property grid-column: 1 / span 2; is used in a CSS Grid layout to control how an element spans across columns:
 
@@ -79,7 +80,6 @@ span 2 means the element will span across 2 columns, starting from the first col
 So, if you have a grid with multiple columns, this rule makes the element occupy the space of two columns, starting from the first column. */
 .textarea_control {
   grid-column: 1 / span 2;
-  
 }
 .textarea_control textarea {
   width: 100%;
@@ -89,4 +89,88 @@ So, if you have a grid with multiple columns, this rule makes the element occupy
   .textarea_control {
     grid-column: 1 / span 1;
   }
-} ;
+}
+/* Mobile Devices (max-width: 600px) */
+@media (max-width: 600px) {
+  .apply_box {
+    width: 100%; /* Make form container take full width */
+    margin: 0 10px; /* Add margin to prevent touching edges */
+    padding: 15px;
+  }
+
+  .form_container {
+    grid-template-columns: 1fr; /* Stack form controls vertically */
+  }
+
+  .button_container {
+    justify-content: center; /* Center the apply button on smaller screens */
+  }
+
+  button {
+    width: 100%; /* Make button full width on small screens */
+  }
+
+  .textarea_control {
+    grid-column: 1 / span 1;
+  }
+}
+
+/* Tablets (601px - 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+  .apply_box {
+    width: 90%; /* Slightly smaller form container on tablets */
+    margin: 0 auto;
+  }
+
+  .form_container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on tablet screens */
+    gap: 15px;
+  }
+
+  .textarea_control {
+    grid-column: 1 / span 2; /* Keep textarea control spanning two columns */
+  }
+
+  button {
+    padding: 8px 12px;
+  }
+}
+
+/* Larger Tablets and Small Desktops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .apply_box {
+    width: 80%; /* Form container size for larger tablets */
+    margin: 0 auto;
+  }
+
+  .form_container {
+    grid-template-columns: repeat(
+      2,
+      minmax(200px, 1fr)
+    ); /* Two equal columns */
+  }
+
+  .textarea_control {
+    grid-column: 1 / span 2; /* Keep textarea spanning two columns */
+  }
+
+  button {
+    width: auto; /* Button will resize based on content */
+  }
+}
+
+/* Desktops (1025px and above) */
+@media (min-width: 1025px) {
+  .apply_box {
+    width: 600px; /* Keep form size fixed on desktops */
+  }
+
+  .form_container {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .textarea_control {
+    grid-column: 1 / span 2; /* Span two columns for large textarea */
+  }
+}

@@ -1,16 +1,14 @@
-
 html,
 body {
   height: 100%;
   margin: 0;
   font-size: 16px;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
   line-height: 1.8em;
   color: #666;
 }
 .pimg1 {
- 
   background-image: url(images/image1.jpg);
   min-height: 100%;
 }
@@ -23,7 +21,7 @@ body {
   min-height: 500px;
 }
 .pimg1,
-.pimg2, 
+.pimg2,
 .pimg3 {
   position: relative;
   background-position: center;
@@ -31,8 +29,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-.ptext{
-  position:absolute;
+.ptext {
+  position: absolute;
   top: 50%;
   width: 100%;
   text-align: center;
@@ -40,14 +38,12 @@ body {
   font-size: 27px;
   letter-spacing: 7px;
   text-transform: uppercase;
-
 }
 
-.textBg{
+.textBg {
   background: #313534;
   color: #fff;
   padding: 20px;
-
 }
 .section {
   padding: 50px 80px;
@@ -57,10 +53,52 @@ body {
   background-color: #f4f4f4;
   color: #666;
 }
- .section-dark {
+.section-dark {
   background-color: #282e34;
   color: #ddd;
-} 
+}
 
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+  .pimg1,
+  .pimg2,
+  .pimg3 {
+    background-attachment: scroll;
+  }
 
+  .ptext {
+    font-size: 20px;
+    letter-spacing: 5px;
+    padding: 10px;
+  }
 
+  .section {
+    padding: 30px 40px;
+  }
+
+  .section-light,
+  .section-dark {
+    padding: 30px 40px;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .ptext {
+    font-size: 16px;
+    letter-spacing: 3px;
+    padding: 8px;
+  }
+
+  .section {
+    padding: 20px 20px;
+  }
+
+  .section-light,
+  .section-dark {
+    padding: 20px 20px;
+  }
+  body {
+    font-size: 14px;
+  }
+}

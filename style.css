@@ -39,6 +39,12 @@ body {
 }
 header {
   background-color: var(--darker-color);
+  position: fixed; /* Fixes header at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures header is on top of other content */
+  padding: 0 20px; /* Horizontal padding */
 }
 nav {
   display: flex;
@@ -47,7 +53,7 @@ nav {
 }
 logo {
   font-size: 2.4rem;
-  font-weight: 700;
+  font-weight: 900;
 
   align-items: center;
 }
@@ -83,9 +89,6 @@ nav li:hover {
 }
 
 .hero-img img {
-  
- 
-  
 }
 .hero-content {
   display: grid;
@@ -147,13 +150,11 @@ nav li:hover {
   gap: 2rem;
 }
 .card img {
-
-  width: 100%;        /* Make the image take the full width of the grid cell */
-  height: 400px;      /* Set a fixed height for all images */
-  object-fit: cover; 
+  width: 100%; /* Make the image take the full width of the grid cell */
+  height: 400px; /* Set a fixed height for all images */
+  object-fit: cover;
   object-position: top; /* Ensure images cover the space without stretching */
   //object-fit: contain;
-
 }
 .grid-item {
   display: grid;
@@ -171,17 +172,15 @@ nav li:hover {
   transform: scale(1.05);
   transition: 0.3s ease-in-out;
 }
-.card:hover img{
+.card:hover img {
   transform: scale(1.05);
   transition: 0.3s ease-in-out;
   opacity: 0.3;
-
 }
-.card:hover .card-content{
+.card:hover .card-content {
   background: #fff;
-  color: #000;;
+  color: #000;
   transform: translateY(0px);
-  
 }
 .card-content {
   padding: 2rem;
@@ -189,7 +188,7 @@ nav li:hover {
   top: -6.5rem;
   margin-bottom: -6.5rem;
   transition: 0.5s ease-in-out;
-  transform: translateY(100px)
+  transform: translateY(100px);
 }
 .card-content h3 {
   text-align: center;
@@ -198,17 +197,14 @@ nav li:hover {
 /* Contact-Section */
 #contact {
   background: var(--dark-color);
-
 }
-#contact h2{
+#contact h2 {
   font-size: 6rem;
   text-align: center;
-  
-  padding:2rem auto;
-  
-  
+
+  padding: 2rem auto;
 }
-#contact .container{
+#contact .container {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -217,14 +213,13 @@ nav li:hover {
 }
 .top-contact {
   display: grid;
-grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-margin: 0 auto;
-max-width: 800px;
-
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  margin: 0 auto;
+  max-width: 800px;
 }
 .contact-way {
   display: flex;
-  gap:1rem;
+  gap: 1rem;
   align-items: center;
 }
 .contact-way i {
@@ -235,51 +230,49 @@ max-width: 800px;
   font-size: 2.5rem;
   font-weight: bold;
 }
-.bottom-contact{
+.bottom-contact {
   display: grid;
-grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-margin: 0 auto;
-max-width: 400px;
-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  margin: 0 auto;
+  max-width: 400px;
+  gap: 1rem;
 }
 /* footer */
-footer{
-  background:var(--darker-color);
+footer {
+  background: var(--darker-color);
   padding: 1.2rem;
   text-align: center;
   font-size: 1.3rem;
   font-weight: 300;
 }
 /* }Media Queries */
-  @media(min-width:900px){
-  html{
+@media (min-width: 900px) {
+  html {
     font-size: 58%;
   }
-}#contact.container{
-    height: 80vh;
-   } 
+}
+#contact.container {
+  height: 80vh;
+}
 
-@media(max-width:768px){
-  html{
+@media (max-width: 768px) {
+  html {
     font-size: 40%;
   }
 }
 
-@media(max-width:500px){
-  html{
+@media (max-width: 500px) {
+  html {
     font-size: 32%;
   }
-   #hero .container{
+  #hero .container {
     flex-direction: column;
-
   }
-  #hero img{
+  #hero img {
     display: grid;
     place-items: center;
-  } 
-   #contact.container{
+  }
+  #contact.container {
     height: 50vh;
-   }
+  }
 }
-
-
